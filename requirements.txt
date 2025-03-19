@@ -1,3 +1,8 @@
 numpy
 pandas
 cupy-cuda11x
+gym
+gymnasium
+gymnasium[toy-text]
+matplotlib
+tqdm
