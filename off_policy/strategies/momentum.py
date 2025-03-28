@@ -38,6 +38,6 @@ b = random_policy
 
 num_episodes = 10000
 V = off_policy_monte_carlo(env, pi, b, num_episodes)
-print("Use Case 1: Moving Average Crossover Strategy")
+print("Use Case 2: Momentum Strategy")
 for state in V:
     print(f"State {state}: V = {V[state]:.2f}")
