@@ -3,7 +3,7 @@
 # elif short term MA < long term MA => Sell
 
 import numpy as np
-from .base_strat import BaseTradingEnv
+from .base_strat import BaseTradingEnv, random_policy
 from ..main import off_policy_monte_carlo
 
 class MAEnv(BaseTradingEnv):
@@ -32,9 +32,6 @@ def ma_policy(state):
         return {0: 0.0, 1: 0.0, 2: 1.0} # Sell 
     else:
         return {0: 1.0, 1: 0.0, 2: 0.0} # Hold
-    
-def random_policy(state):
-    return {0: 1/3, 1: 1/3, 2: 1/3}
 
 if __name__ == "__main__":
     env = MAEnv()

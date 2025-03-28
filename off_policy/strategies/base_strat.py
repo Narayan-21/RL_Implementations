@@ -27,7 +27,8 @@ class BaseTradingEnv:
             self.purchase_price = current_price
         elif action == 2 and self.position == 1:
             self.position = 0
-            reward = current_price - self.purchase_price
+            if self.purchase_price is not None:
+                reward = current_price - self.purchase_price
         
         # Generate Next price
         next_price = current_price + np.random.normal(0, 1)
@@ -42,3 +43,6 @@ class BaseTradingEnv:
     
     def get_possible_states(self):
         raise NotImplementedError("SubClass must implement get_possible_states()")
+    
+def random_policy(state):
+    return {0: 1/3, 1: 1/3, 2: 1/3}
