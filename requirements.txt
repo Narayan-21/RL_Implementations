@@ -7,3 +7,4 @@ gymnasium[toy-text]
 matplotlib
 tqdm
 scipy
+yfinance
