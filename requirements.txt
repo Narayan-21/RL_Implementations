@@ -8,3 +8,4 @@ matplotlib
 tqdm
 scipy
 yfinance
+rlglue @ git+https://github.com/andnp/coursera-rl-glue.git@0.1
